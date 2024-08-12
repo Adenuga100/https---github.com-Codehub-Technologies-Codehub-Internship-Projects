@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    padding: auto;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(41, 41, 90);
+}
+
+.login{
+ max-width: 900px;
+ margin: auto;
+ margin-top: 70px;
+ 
+}
+
+.loginpage h4{
+ text-align: center;
+ margin-bottom: 10px;
+ font-size: 30px;
+}
+
+.loginform{
+    display: flex;
+    border: 5px solid rgb(101, 101, 188);
+    border-radius: 15px 3px ;
+    width: auto;
+}
+
+.imaga img{
+   width: 300px;
+   height: 100%;
+}
+
+form{
+    padding: 80px;
+    background: white;
+    width: 590px;
+}
+
+.loginpage{
+ color:rgb(27, 27, 99);
+}
+
+.form{
+    margin-top: -10px;
+}
+
+.label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.field input{
+    width: 100%;
+    height: 40px;
+    border: 3px solid rgb(119, 119, 240);
+    border-radius: 10px;
+}
+
+.forget a{
+    text-decoration: none;
+}
+
+.forget p{
+    margin: 10px;
+    font-size: 17px;
+    text-align: center;
+}
+
+button{ 
+    min-width: 430px;
+    margin: auto;
+    height: 40px;
+    background: rgb(27, 27, 99);
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    color: white;
+    margin-top: 20px;
+    margin-left: -1px;
+}
+
+button:hover{
+    background: rgb(79, 79, 219);
+}
+
+/***socials**/
+
+.social{
+    display:flex;
+}
+
+.soc{
+    display: flex;
+    border: 2px solid rgb(27, 27, 99);
+    width: 300px;
+    padding: 10px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.soc ion-icon{
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: -1%;
+}
+
+.soc p{
+    font-size: 14px;
+}
+
+.media{
+    display: flex;
+    margin-left: 40px;
+}
+
+.media .lin{
+    margin: 10px;
+    border: 2px solid rgb(27, 27, 99);
+    padding: 10px;
+    height: 40px;
+}
+
+.media .lin ion-icon{
+    font-size: 25px;
+    margin-top: -3px;
+    color: rgb(48, 48, 236);
+}
+
+.media .lin div ion-icon{
+    color: rgb(89, 89, 91);
+}
+
+.or{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+
+
+.or::before,.or::after
+{
+    content: "";
+    background: rgb(27, 27, 99);
+    width: 189px;
+    height: 2px;
+    display: block;
+}
+/***socials**/
+
+/***checkbox**/
+.box{
+    display: flex;
+    margin-top: 10px;
+}
+
+.box .tick input{
+    border: 4px solid rgb(84, 84, 213);
+   margin-right: 6px;
+}
+
+.box .tet p{
+    font-size: 15px;
+}
+/***checkbox**/
