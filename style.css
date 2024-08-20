@@ -12,6 +12,7 @@ body{
  max-width: 900px;
  margin: auto;
  margin-top: 70px;
+ width: auto;
  
 }
 
@@ -21,12 +22,176 @@ body{
  font-size: 30px;
 }
 
+.empty{
+    display: none;
+}
+
 .loginform{
     display: flex;
     border: 5px solid rgb(101, 101, 188);
     border-radius: 15px 3px ;
     width: auto;
 }
+.loginform1{
+    display: flex;
+    border: 5px solid rgb(101, 101, 188);
+    border-radius: 15px 3px ;
+    width: auto;
+}
+
+@media screen and (min-width: 768px){
+    
+    .loginform{
+        margin-bottom: 25px;
+
+    }
+
+    #field-form{
+        width: 777px;
+       
+    }
+
+    #or1{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+    #or1::before,#or1::after
+   {
+    
+    content: "";
+    background: rgb(27, 27, 99);
+    width: auto;
+    height: 2px;
+    display: block;
+   }
+
+    #soc{
+      width: auto;
+    }
+
+
+    #media{
+        max-width: 130px;
+        margin: auto;
+    }
+
+    #imaga img{
+        width: 100%;
+    }
+
+    #button{
+        min-width: auto;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) and (min-width: 100px){
+    .loginform{
+        max-width: 900px;
+        margin: -35px;
+        display: block;
+        margin-left: 1px;
+        margin-bottom: 25px;
+
+    }
+
+    .loginform1{
+        max-width: 310px;
+        margin: -35px;
+        margin-left: 3px;
+        margin-bottom: 25px;
+
+    }
+
+    .form{
+        width: auto;
+       
+    }
+
+    #button{
+        min-width: auto;
+        width: 100%;
+    }
+
+    #field-form{
+        width: auto;
+       
+    }
+
+    #imaga img{
+        width: 100%;
+        height: 400px;
+    }
+
+    #social{
+        display: block;
+    
+    }
+
+    #soc{
+        width: auto;
+        margin-left: 5px;
+    }
+
+    #or1{
+        display: none;
+    }
+
+   
+    #social #or{ 
+        display: grid;
+    }
+
+   #social #or::before,#social #or::after
+   {
+    
+    content: "";
+    background: rgb(27, 27, 99);
+    width: auto;
+    height: 2px;
+    display: block;
+   }
+
+   
+
+    .field input{
+        width: auto;
+        padding: auto;
+    }
+
+    #media{
+        max-width: 400%;
+        margin: auto;
+    }
+
+    #lin {
+        padding: auto;
+        margin: auto;
+    }
+
+    #pstreng #strenth,#strenth2,#strenth3,#strenth4,#strenth5{
+        width: auto;
+        padding-right: 30px;
+    }
+
+    #homepage{
+        max-width: 300px;
+       margin: auto;
+       margin-bottom: 20px;
+       margin-top: 20px;
+    }
+
+    .word h1{
+        font-size: 30px;
+    }
+
+}
+
+
 
 .imaga img{
    width: 300px;
@@ -39,6 +204,77 @@ form{
     width: 590px;
 }
 
+/***open and close**/
+
+.open img{
+    width: 25px;
+    position: absolute;
+    bottom: 146px;
+    right: 580px;
+    display: none;
+}
+
+#user1{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border: 3px solid rgb(119, 119, 240);
+    border-radius: 10px ;
+}
+
+#user1 input{
+    width: 100%;
+    border: 0;
+    background: none;
+}
+
+
+#user1 img{
+    margin: auto;
+    width: 25px;
+    height: 15px;
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.close img{
+    width: 25px;
+    position: absolute;
+    bottom: 146px;
+    right: 580px;
+    display: none;
+}
+
+.close1 img{
+    width: 25px;
+    position: absolute;
+    bottom: 146px;
+    right: 580px;
+    bottom: 76px;
+    display:none
+}
+/***open and close**/
+
+/***password strength**/
+.pstreng{
+    display: flex;
+}
+
+.strenth{
+  width: 40px;
+  height: 2px;
+  margin-top: 10px;
+  margin-left: 5px;
+  padding-right: 75px;
+  border: 2px solid rgb(182, 182, 235);
+  border-radius: 10px 10px;
+}
+
+span{
+    color: rgb(119, 119, 240);;
+}
+
+/***password strength**/
 .loginpage{
  color:rgb(27, 27, 99);
 }
@@ -57,10 +293,12 @@ form{
     height: 40px;
     border: 3px solid rgb(119, 119, 240);
     border-radius: 10px;
+    outline: 0;
 }
 
 .forget a{
     text-decoration: none;
+    color:rgb(119, 119, 240) ;
 }
 
 .forget p{
@@ -101,15 +339,18 @@ button:hover{
     margin-top: 10px;
 }
 
-.soc ion-icon{
+.soc{
     font-size: 25px;
     margin-right: 10px;
-    margin-top: -1%;
+    margin-top: 3%;
 }
 
 .soc p{
     font-size: 14px;
+    margin-left: 10px;
 }
+
+
 
 .media{
     display: flex;
@@ -123,21 +364,24 @@ button:hover{
     height: 40px;
 }
 
-.media .lin ion-icon{
-    font-size: 25px;
-    margin-top: -3px;
-    color: rgb(48, 48, 236);
+.media .lin img{
+    width: 25px;
+    margin-top: -6px;
 }
 
-.media .lin div ion-icon{
-    color: rgb(89, 89, 91);
-}
+
 
 .or{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+}
+
+#or{
+    
+    display:none;
+
 }
 
 
@@ -150,6 +394,8 @@ button:hover{
     height: 2px;
     display: block;
 }
+
+
 /***socials**/
 
 /***checkbox**/
@@ -167,3 +413,35 @@ button:hover{
     font-size: 15px;
 }
 /***checkbox**/
+
+
+/***homepage**/
+.homepage{
+    background: white;
+    height: 500px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.home{
+    max-width: 400px;
+    margin: auto;
+    padding-top: 150px;
+}
+
+.word h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/***homepage**/
+
+/**forget**/
+#form{
+    max-width: 2000px;
+    margin: auto;
+    border: 5px solid rgb(101, 101, 188);
+    border-radius: 15px 3px ;
+}
+/**forget**/

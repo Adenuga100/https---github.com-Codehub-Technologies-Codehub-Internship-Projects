@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pages</title>
+    <link rel="stylesheet" type="text/css"  href="style.css">
+</head>
+<body>
+    <div class="login">
+        
+        <div class="loginform">
+
+            <form action="" id="field-form">
+              
+                <div class="loginpage">
+                    <h4> Log In</h4>
+                </div>
+
+                <!--social-->
+                <div class="social" id="social">
+
+                    <!---google-->
+                    <div class="soc" id="soc">
+                        <img src="images/Vector - Google Icon.png" alt="">
+                        <p>Log in with Google</p>
+                    </div>
+
+                    <div class="or" id="or" >
+                        <p>Or</p>
+                    </div>
+
+                    <div class="media" id="media">
+                    
+                        <!---linki-->
+                        <div class="lin" id="lin">
+                            <img src="images/Vector- LinkedIn Icon.png" alt="">
+                        </div>
+
+                        <!---facebook-->
+                        <div class="lin" id="lin">
+                            <img src="images/Vector- Facebook Icon.png" alt="">
+                        </div>
+
+                        <!---apple-->
+                        <div class="lin" id="lin">
+                            <img src="images/Vector- Apple Icon.png" alt="">
+                        </div>
+                    
+                    </div>
+                </div>
+                <!--social-->
+
+                <!---or-->
+                <div class="or" id="or1">
+                    <p>Or</p>
+                </div>
+                <!---or-->
+
+                <!--Username-->
+                <div class="form">
+
+                    <div class="label">
+                        <label for="Email">Email</label>
+                    </div>
+
+                    <div class="field">
+
+                        <div class="user">
+                           <input type="Email" name="Email" placeholder="johnsmith@gmail.com" required>
+                        </div>
+                
+                    </div>
+
+                </div>
+              <!--Username-->
+
+              <!---Password-->
+                <div class="form">
+                    <div class="label">
+                       <label for="Password">Password</label>
+                    </div>
+
+                    <div class="field">
+
+                        <div class="user" id="user1">
+                          <input type="password" id="password" placeholder="johnsmith$1" required>
+                          <img src="images/Vector - Eye Closed Icon.png" alt="" id="close">
+                        </div>
+
+                    
+                    </div>
+                </div>
+                <!---Password-->
+
+                <!---button-->
+                <div class="button" >
+                    <a href="#"><button id="button">Login</button></a> 
+                </div>
+
+                <!--forgetpassword-->
+                <div class="forget">
+                    <p><a href="forget.html">Forget password or username</a></p>
+                </div>
+                <!--forgetpassword-->
+                
+                <div class="forget">
+                    <p>Don't have an account?<a href="signup.html">Sign up</a></p>
+                </div>
+
+            </form>
+
+            <!--image beside the form-->
+           <div class="imaga" id="imaga">
+               <img src="images/1be2311c-818d-4cfd-8bbb-84471c672ac3.jpeg" alt="">
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script>
+       var pass = document.getElementById("password");
+       var close = document.getElementById("close");
+        /****hidepassword**/
+      close.onclick = function(){
+            if(pass.type == "password"){
+                
+                pass.type = "text";
+                close.src = "images/Vector- Eye Opened Icon.png"
+            }
+            else{
+               
+                pass.type = "password";
+                close.src = "images/Vector - Eye Closed Icon.png"
+            }
+                
+        }
+    </script>
+
+</body>
+</html>

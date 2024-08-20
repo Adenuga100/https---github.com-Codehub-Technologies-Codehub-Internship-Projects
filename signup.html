@@ -4,46 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up Authentication Pages</title>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" type="text/css"  href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="login">
         
         <div class="loginform">
 
-            <form action="">
+            <form action="" id="field-form">
 
                 <div class="loginpage">
                     <h4> Sign Up</h4>
                 </div>
 
                 <!--social-->
-                <div class="social">
+                <div class="social" id="social">
 
                     <!---google-->
-                    <div class="soc">
-                        <ion-icon name="logo-google"></ion-icon>
+                    <div class="soc" id="soc">
+                        <img src="images/Vector - Google Icon.png" alt="">
                         <p>Sign up with Google</p>
                     </div>
 
-                    <div class="media">
+                    <div class="or" id="or" >
+                        <p>Or</p>
+                    </div>
+
+                    <div class="media" id="media">
                     
                         <!---linki-->
-                        <div class="lin">
-                            <ion-icon name="logo-linkedin"></ion-icon>
+                        <div class="lin"  id="lin">
+                            <img src="images/Vector- LinkedIn Icon.png" alt="">
                         </div>
 
                         <!---facebook-->
-                        <div class="lin">
-                            <ion-icon name="logo-facebook"></ion-icon>
+                        <div class="lin"  id="lin">
+                            <img src="images/Vector- Facebook Icon.png" alt="">
                         </div>
 
                         <!---apple-->
-                        <div class="lin">
+                        <div class="lin"  id="lin">
                             <div>
-                              <ion-icon name="logo-apple"></ion-icon>
+                            <img src="images/Vector- Apple Icon.png" alt="">
                            </div>
                         </div>
                     
@@ -52,7 +55,7 @@
                 <!--social-->
 
                 <!---or-->
-                <div class="or">
+                <div class="or" id="or1">
                     <p>Or</p>
                 </div>
                 <!---or-->
@@ -99,15 +102,28 @@
 
                     <div class="field">
 
-                        <div class="user">
-                          <input type="password" name="password" placeholder="johnsmith$1" required>
+                        <div class="user" id="user1">
+                          <input type="password"  id="password" placeholder="johnsmith$1" required>
+                          <img src="images/Vector - Eye Closed Icon.png" alt="" id="closeeye">
                         </div>
 
                     </div>
 
                     <div class="stron">
-                        <p>Password Strength:</p>
+                        <p id="pas2">Password Strength: <span id="week"></span></p>
                     </div>
+
+                    <!---Password strength-->
+                    <div class="pstreng" id="pstreng">
+                        <div class="strenth" id="strenth"></div>
+                        <div class="strenth" id="strenth2"></div>
+                        <div class="strenth" id="strenth3"></div>
+                        <div class="strenth" id="strenth4"></div>
+                        <div class="strenth" id="strenth5"></div>
+                        
+                    </div>
+                    <!---Password strength-->
+
                 </div>
                 <!---Password-->
 
@@ -126,22 +142,81 @@
    
                 <!---button-->
                 <div class="button">
-                    <button>Sign Up</button> 
+                    <button id="button">Sign Up</button> 
                 </div>
 
                 <!---login-->
                 <div class="forget">
-                    <p>Already have an account?<a href="index.html">Log in</a></p>
+                    <p>Already have an account?<a href="login.html">Log in</a></p>
                 </div>
             </form>
 
-            <div class="imaga">
+            <div class="imaga" id="imaga">
                 <img src="images/1be2311c-818d-4cfd-8bbb-84471c672ac3.jpeg" alt="">
             </div>
 
         </div>
         
     </div>
-    
+    <script>
+        var pass = document.getElementById("password");
+        var str = document.getElementById("strenth");
+        var str2 = document.getElementById("strenth2");
+        var str3 = document.getElementById("strenth3");
+        var str4 = document.getElementById("strenth4");
+        var str5 = document.getElementById("strenth5");
+        var week = document.getElementById("week");
+        var msg = document.getElementById("pass2");
+        var close = document.getElementById("closeeye");
+       
+        pass.addEventListener('input', () => 
+        {
+        if(pass.value.length > 0 && pass.value.length < 2){
+            week.innerHTML = "";
+            str.style.borderColor = "";
+            str2.style.borderColor = "";
+        }
+
+        else if(pass.value.length >= 2 && pass.value.length < 4){
+            str.style.borderColor = "rgb(119, 119, 240)";
+            str2.style.borderColor = "rgb(119, 119, 240)";
+            str3.style.borderColor = "";
+            week.innerHTML = "Week";
+        }
+
+        else if(pass.value.length >= 4 && pass.value.length < 8){
+            str2.style.borderColor = "rgb(119, 119, 240)";
+            str3.style.borderColor = "rgb(119, 119, 240)";
+            str4.style.borderColor = "";
+            str5.style.borderColor = "";
+           week.innerHTML = "Medium";
+        }
+
+        else if(pass.value.length >= 8){
+            str4.style.borderColor = "rgb(119, 119, 240)";
+            str5.style.borderColor = "rgb(119, 119, 240)";
+            week.innerHTML = "Strong";
+        }
+        
+        
+      
+       })
+
+        /****hidepassword**/
+      close.onclick = function(){
+            if(pass.type == "password"){
+                
+                pass.type = "text";
+                close.src = "images/Vector- Eye Opened Icon.png"
+            }
+            else{
+               
+                pass.type = "password";
+                close.src = "images/Vector - Eye Closed Icon.png"
+            }
+                
+        }
+    </script>
 </body>
 </html>
+
