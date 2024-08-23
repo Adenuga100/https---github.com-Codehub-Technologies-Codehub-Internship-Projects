@@ -11,7 +11,7 @@
         
         <div class="loginform1">
 
-            <form action="" id="field-form">
+            <form action="" class="form1" id="field-form">
               
                 
                 <!--Username-->
@@ -24,7 +24,7 @@
                     <div class="field">
 
                         <div class="user">
-                           <input type="Email" id="Email" placeholder="johnsmith@gmail.com" >
+                           <input type="Email" id="Email" placeholder="johnsmith@gmail.com" required>
                            <p id="empty">The field is empty</p>
                         </div>
                 
@@ -59,8 +59,8 @@
               
               emp.style.display = "block";
               
-            }else{
-                emp.style.display = "none";
+            }else if(email.type > 0){
+                emp.style.display = "";
                 
             }
             
