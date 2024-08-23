@@ -190,9 +190,10 @@ body{
     #homepage{
         max-width: 350px;
        margin: auto;
-       margin-bottom: -900%;
-       margin-top: 20px;
-       min-height: 620px;
+       
+       min-height: 560px;
+       margin: auto;
+       margin-top: 39px;
     }
 
     .word h1{
