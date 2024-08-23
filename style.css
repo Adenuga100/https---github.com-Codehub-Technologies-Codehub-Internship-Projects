@@ -207,6 +207,9 @@ body{
     #soc img{
         width: 10px;
     }
+    #soc p{
+        font-size: 12px;
+    }
 
 }
 
