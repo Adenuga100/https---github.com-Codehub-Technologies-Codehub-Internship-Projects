@@ -24,7 +24,8 @@
                     <div class="field">
 
                         <div class="user">
-                           <input type="Email" name="Email" placeholder="johnsmith@gmail.com" required>
+                           <input type="Email" id="Email" placeholder="johnsmith@gmail.com" >
+                           <p id="empty">The field is empty</p>
                         </div>
                 
                     </div>
@@ -48,5 +49,24 @@
         </div>
         
     </div>
+    <script>
+        var email = document.getElementById("Email");
+        var emp = document.getElementById("empty");
+        var but = document.getElementById("button");
+
+        but.onclick = function(){
+            if(email.style.display== "none"){
+              
+              emp.style.display = "block";
+              
+            }else{
+                emp.style.display = "none";
+                
+            }
+            
+    
+        }
+        
+    </script>
 </body>
 </html>

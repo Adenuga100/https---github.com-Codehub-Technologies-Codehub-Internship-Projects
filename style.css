@@ -318,6 +318,10 @@ span{
     outline: 0;
 }
 
+.field p{
+    display: none;
+}
+
 .forget a{
     text-decoration: none;
     color:rgb(119, 119, 240) ;
